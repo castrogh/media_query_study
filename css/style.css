@@ -1,0 +1,189 @@
+:root{
+    --cor-primaria-success : rgb(82, 244, 87);
+    --cor-secundaria-success : green;
+    --cor-hover-success : darkgreen;
+
+    --cor-primaria-info : rgb(98, 250, 255);
+    --cor-secundaria-info : rgb(14, 76, 80);
+    --cor-hover-info : rgb(0, 153, 255);
+
+    --cor-primaria-danger : yellow;
+    --cor-secundaria-danger : black;
+    --cor-hover-danger : rgb(249, 88, 56);
+}
+
+body {
+    background-color: rgb(112, 152, 182);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+.menu{
+    background-color: rgb(58, 58, 58);
+    text-align: left;
+}
+
+.menu ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    z-index: 10;
+    background-color: rgb(58, 58, 58);
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    padding: 20px;
+    color:rgb(112, 152, 182);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: white;
+    transition: background .5s;
+}
+
+/*.menu ul li:last-child a{
+    color: white;
+    background-color: rgb(77, 107, 131);
+    float: right;
+}*/
+
+
+/* Botões */
+
+.button{
+    display: grid;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 6px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*BTN Success*/
+
+.button-success{
+    background-color: var(--cor-primaria-success);
+    outline: none;
+    color: var(--cor-secundaria-success);
+    text-transform: uppercase;
+}
+
+.button-success:hover{
+    background-color: var(--cor-hover-success);
+    color: rgb(172, 234, 175);
+}
+
+.button-success:active{
+    background-color: var(--cor-secundaria-success);
+}
+
+/*BTN Info*/
+
+.button-info{
+    background-color: var(--cor-primaria-info);
+    outline: none;
+    color: var(--cor-secundaria-info);
+    text-transform: uppercase;
+}
+
+.button-info:hover{
+    background-color: var(--cor-hover-info);
+    color: rgb(13, 64, 101);
+}
+
+.button-info:active{
+    background-color: var(--cor-secundaria-info);
+}
+
+/*BTN Danger*/
+
+.button-danger{
+    background-color: var(--cor-primaria-danger);
+    outline: none;
+    color: var(--cor-secundaria-danger);
+    text-transform: uppercase;
+}
+
+.button-danger:hover{
+    background-color: var(--cor-hover-danger);
+    color: black;
+}
+
+.button-danger:active{
+    background-color: var(--cor-secundaria-danger);
+}
+
+
+/* Rodapé */
+
+.footer{
+    background-color: rgb(42, 37, 58);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100%;
+}
+
+.footer_divs{
+    width: 33,33%;
+    border: 1px solid transparent;
+}
+
+.footer_img{
+    width: 70px;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: blueviolet;
+    }
+
+    .menu ul li a{
+        width: 100%;
+        display: grid;
+        text-align: center;
+    }
+
+    .footer{
+        display: grid;
+    }
+}
+
+@media screen and (max-width:600px){
+    body {
+        background-color: brown;
+    }
+    
+    .menu ul li a {
+        width: 100%;
+        display: grid;
+        text-align: center;
+    }
+
+    .footer{
+        display: grid;
+    }
+
+    .footer img {
+        display: none;
+    }
+}
